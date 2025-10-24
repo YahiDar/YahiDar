@@ -2,7 +2,103 @@
 <html>
 
 <head>
-  <title>MMM2024</title>
+<style>
+  /* --- Publication Entry Styles (Updated) --- */
+  
+  .pub-container {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pub-layout {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .pub-image-wrapper {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .pub-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.375rem;
+    /* border: 1px solid rgb(209 213 219); */
+    object-fit: cover;
+  }
+
+  .pub-content {
+    width: 100%;
+  }
+  
+  .pub-title {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    color: rgb(17 24 39);
+    margin-top: 0; /* <-- FIX: Aligns title with top of image */
+    margin-bottom: 0.05rem; /* <-- REDUCED: Tighter spacing */
+  }
+  
+  .pub-authors {
+    font-size: 1.125rem;
+    line-height: 0.05rem;
+    color: rgb(55 65 81);
+    margin-bottom: 0rem; /* <-- REDUCED: Tighter spacing */
+  }
+  
+  .pub-venue {
+    font-size: 1rem;
+    line-height: 0.5rem;
+    color: rgb(75 85 99);
+    font-style: italic;
+    margin-bottom: 0rem; /* <-- REDUCED: Tighter spacing */
+  }
+  
+  .pub-links {
+    margin-bottom: 0rem; /* <-- REDUCED: Tighter spacing */
+  }
+  .pub-links a {
+    text-decoration: none;
+    color: #000;
+  }
+  .pub-links a:hover {
+    text-decoration: underline;
+  }
+  .pub-links b {
+    font-weight: 700;
+    color: rgb(37 99 235);
+  }
+  
+  .pub-description {
+    font-size: 1rem;
+    line-height: 1.225;
+    color: rgb(55 65 81);
+    margin-top: 0;
+    text-align: justify;
+  }
+
+  @media (min-width: 768px) {
+    .pub-layout {
+      flex-direction: row; 
+    }
+    .pub-image-wrapper {
+      width: 33.333333%;
+    }
+    .pub-content {
+      width: 66.666667%;
+    }
+  }
+</style>
+  <title>Hi!</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
   <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
@@ -11,6 +107,8 @@
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/footer.js"></script>
@@ -24,17 +122,36 @@
 </head>
 
 <body>
-  <div class="menu-container"></div>
+<!-- <div class="menu-container"></div> -->
   <div class="content-container">
-    <div class="banner" style="background: url('img/feature.jpeg') no-repeat center; background-size: cover; height: 450px;">
-      <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5);">
-        <div class="flex-row">
+    <div class="banner" style="background: url('img/feature.jpeg') no-repeat center; background-size: cover; height: 280px;">
+<img src="/img/zeit_crop.png" alt="Logo" style="position: absolute; bottom: 0px; left: 0px; width: 100px; height: 100px; z-index: 10; border-radius: 50%; object-fit: cover;">
+
+      <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5); align-items: flex-start; padding-left: 25%;">
+        
+<div class="flex-row" style="align-items: center;">
           <div class="flex-item flex-column">
-            <h1 class="add-top-margin-small">30th International Conference on Multimedia Modeling</h1>
+            <h1 class="add-top-margin-small">Yahia Dalbah</h1>
             <p class="text" style="font-size: 20px">
-              January 29 - February 2, 2024 (Amsterdam, The Netherlands)
+              PhD Student @ <a target="_blank" href="https://multix.io"><b>MultiX</b></a> - <a target="_blank" href="https://www.uva.nl/en"><b>University of Amsterdam</b></a>
+            </p>
+            <p class="text" style="font-size: 20px">
+              Email: <a target="_blank" href="mailto:y.i.r.dalbah@uva.nl"><b>y.i.r.dalbah@uva.nl</b></a>
+            </p>
+            <p class="text" style="font-size: 20px">
+              Supervised by <a target="_blank" href="https://yenchiah.me/"><b>Dr. Yen-Chia Hsu</b></a>
+            </p>
+            <p class="text" style="font-size: 20px">
+<a target="_blank" href="https://scholar.google.com/citations?user=58vfzfUAAAAJ&hl=en" style="margin-right: 15px; color: white;"><i class="fa-brands fa-google-scholar"></i> Scholar <b></b></a>
+              <a target="_blank" href="https://github.com/yahiDar/" style="margin-right: 15px; color: white;"><i class="fa-brands fa-github"></i> Github<b></b></a>
+              <a target="_blank" href="https://www.linkedin.com/in/yahia-dalbah-6b766016a/" style="color: white;"><i class="fa-brands fa-linkedin"></i> LinkedIn <b></b></a>
             </p>
           </div>
+          
+          <div class="flex-item flex-column" style="margin-left: 40px;">
+            <img src="img/yahia.png" alt="Yahia Dalbah" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid black;">
+          </div>
+
         </div>
       </div>
     </div>
@@ -43,68 +160,201 @@
         <div class="flex-row">
           <div class="flex-item flex-column">
             <p class="text">
-              Welcome to Multimedia Modelling 2024, the premier conference for researchers and practitioners in the field of multimedia modeling.
-              The conference will be held in the beautiful city of Amsterdam in the Netherlands at January 29 - February 2, 2024.
+              Hi, I am Yahia!
+              I am lazy to actually write stuff here but i'll kind of get onto that later. In the meantime, feel free to explore this website and my previous publications!
             </p>
+
             <p class="text">
-              MMM is a leading international conference for researchers and industry practitioners for sharing new ideas, original research results and practical development experiences from all MMM related areas.
-              The conference calls for research papers reporting original investigation results and demonstrations reporting novel and compelling applications.
-              Special sessions, Brave New Ideas session, keynote lectures, the Video Browser Showdown and the MediaEval workshop will also contribute to a high-quality program.
             </p>
-            <p class="text">
-              While MMM 2024 will be broadcast online for registered participants, the conference will primarily be an onsite event.
-              In particular, presenting authors of all oral presentations are expected to attend the conference on location.
-              Posters will be presented in hybrid onsite/online sessions, so virtual poster presentations will be possible.
-            </p>
+
+  <h3>Publications</h3>
+  <hr>
+  
+  <div class="pub-container">
+  <!-- Flex container: -->
+  <div class="pub-layout">
+
+    <!-- Left Column: Image Snapshot -->
+    <div class="pub-image-wrapper">
+      <img src="./img/veli.png" 
+           alt="Publication Snapshot" 
+           class="pub-image">
+    </div>
+
+    <!-- Right Column: Titles and Information -->
+    <div class="pub-content">
+      <!-- Title -->
+      <h2 class="pub-title">
+        Veli: Unsupervised Method and Unified Benchmark for Low-Cost Air Quality Sensor Correction
+      </h2>
+
+      <!-- Authors -->
+      <p class="pub-authors">
+        <b>Yahia Dalbah</b>, Marcel Worring, Yen-Chia Hsu
+      </p>
+
+      <!-- Status / Preprint Info -->
+      <p class="pub-venue">
+        Arxiv (pre-print)
+      </p>
+
+      <!-- Links (paper, code, etc.) -->
+      <p class="pub-links">
+        <a target="_blank" href="https://arxiv.org/pdf/2508.02724?"><b>Paper </b></a> | 
+        <a target="_blank" href="https://github.com/YahiDar/AQ-SDR"><b>Code (Dataset)</b></a> |
+        <a target="_blank" href="https://github.com/YahiDar/Veli"><b>Code (Model)</b></a> |
+        <a target="_blank" href="https://explore.esdr.multix.io/"><b>Dashboard Demo</b></a>
+        
+      </p>
+
+      <p class="pub-description">
+      We introduce Veli (Reference free Variational Estimation via Latent Inference), an unsupervised Bayesian model that leverages variational inference
+      to correct LCS readings without requiring co-location with reference stations, eliminating a major deployment barrier. We also introduce the Air Quality Sensor Data Repository (AQ-SDR). AQ-SDR is the largest AQ sensor benchmark to date, with readings from 23,737 LCS and reference stations across multiple regions. 
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+  <div class="pub-container">
+  <!-- Flex container: -->
+  <div class="pub-layout">
+
+    <!-- Left Column: Image Snapshot -->
+    <div class="pub-image-wrapper">
+      <img src="./img/transradar.png" 
+           alt="Publication Snapshot" 
+           class="pub-image">
+    </div>
+
+    <!-- Right Column: Titles and Information -->
+    <div class="pub-content">
+      <!-- Title -->
+      <h2 class="pub-title">
+        Transradar: Adaptive-directional transformer for real-time multi-view radar semantic segmentation
+      </h2>
+
+      <!-- Authors -->
+      <p class="pub-authors">
+        <b>Yahia Dalbah</b>, Jean Lahoud, Hisham Cholakkal
+      </p>
+
+      <!-- Status / Preprint Info -->
+      <p class="pub-venue">
+        WACV 2024
+      </p>
+
+      <!-- Links (paper, code, etc.) -->
+      <p class="pub-links">
+        <a target="_blank" href="https://openaccess.thecvf.com/content/WACV2024/papers/Dalbah_TransRadar_Adaptive-Directional_Transformer_for_Real-Time_Multi-View_Radar_Semantic_Segmentation_WACV_2024_paper.pdf"><b>Paper </b></a> | 
+        <a target="_blank" href="https://github.com/YahiDar/TransRadar"><b>Code</b></a>
+      </p>
+
+      <p class="pub-description">
+         In this work, we propose a novel approach to the semantic segmentation of radar scenes using a multi-input fusion of radar data through a novel architecture and loss functions that are tailored to tackle the drawbacks of radar perception. 
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+  <div class="pub-container">
+  <!-- Flex container: -->
+  <div class="pub-layout">
+
+    <!-- Left Column: Image Snapshot -->
+    <div class="pub-image-wrapper">
+      <img src="./img/radarformer.png" 
+           alt="Publication Snapshot" 
+           class="pub-image">
+    </div>
+
+    <!-- Right Column: Titles and Information -->
+    <div class="pub-content">
+      <!-- Title -->
+      <h2 class="pub-title">
+        RadarFormer: Lightweight and Accurate Real-Time Radar Object Detection Model
+      </h2>
+
+      <!-- Authors -->
+      <p class="pub-authors">
+        <b>Yahia Dalbah</b>, Jean Lahoud, Hisham Cholakkal
+      </p>
+
+      <!-- Status / Preprint Info -->
+      <p class="pub-venue">
+        SCIA 2023
+      </p>
+
+      <!-- Links (paper, code, etc.) -->
+      <p class="pub-links">
+        <a target="_blank" href="https://arxiv.org/pdf/2304.08447"><b>Paper </b></a> | 
+        <a target="_blank" href="https://github.com/YahiDar/RadarFormer"><b>Code</b></a>
+      </p>
+
+      <p class="pub-description">
+         In this work, we propose a novel approach to the semantic segmentation of radar scenes using a multi-input fusion of radar data through a novel architecture and loss functions that are tailored to tackle the drawbacks of radar perception. 
+      </p>
+    </div>
+
+  </div>
+</div>
             <!-- --------------------------------------------------------- -->
-            <h3>News</h3>
+            <h3>Education</h3>
             <hr>
             <ul>
               <li>
-                <p class="text">
-                  <b>Conference Proceedings Online!</b></br>
-                  The proceedings for MMM2024 can now be viewed <a target="_blank" href="https://link.springer.com/book/10.1007/978-3-031-53305-1"><b>online!</b></a>
-                </p>
-              </li>
-              <li>
-                <p class="text">
-                  <b>Conference Programme now available!</b></br>
-                  You can now view the <a href="conference.html#program"><b>conference programme</b></a> for MMM2024!
-                </p>
-              </li>
-              <li>
-                <p class="text">
-                  <b>Demo and brave new ideas deadline extended!</b><br/>
-                  The deadline for submitting demo or brave new idea papers has been extended to <b>16 October</b>, please check the <a href="./dates.html">Important Dates</a> for the latest deadlines.
-                </p>
-              </li>
-              <li>
-                <p class="text">
-                  <b>Registration for the MediaEval Evaluation Benchmark is open!</b>
-                  <a href="https://multimediaeval.github.io/editions/2023/" target="_blank">Click here for more information.</a>
-                  Sign up to participate in challenging multimedia tasks in the areas of: medicine,
-                  cultural heritage, news, sports and neuroscience (memorability). We also
-                  welcome you to embark on a quest for insight into the data and task
-                  results. Submit your runs 15-30 November (see the <a href="https://multimediaeval.github.io/editions/2023/" target="_blank">tasks pages</a> for the
-                  exact deadlines) and your short paper for the workshop proceedings on 15
-                  December. The MediaEval 2023 Workshop will be held 1-2 February 2024 as
-                  part of MMM 2024.
-                </p>
-              </li>
+              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <p class="text" style="margin-right: 15px;">  <b>PhD - Informatics Institute, University of Amsterdam</b></br>
+            <b>2024 - Present</b></br>
+              Thesis: Community-Empowered AI and Visual Analytics for Public Health
+              </p>
+              <img src="img/uva.png" alt="UvA" style="height: 50px; width: auto; flex-shrink: 0;">
+              </div>
+             </li>
+             <li>
+              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <p class="text" style="margin-right: 15px;">  <b>Master of Science in Computer Vision - MBZUAI </b></br>
+            <b>2021 - 2023</b></br>
+              Thesis: Object Detection and Semantic Segmentation on Radar Frequency Signals
+              </p>
+              <img src="img/mbzuai.png" alt="mbzuai" style="height: 50px; width: auto; flex-shrink: 0;">
+              </div>
+             </li>
+             
             </ul>
             <!-- --------------------------------------------------------- -->
-            <h3>Organisers</h3>
-            <hr>
-            <div class="control-group">
-              <img src="img/uva-logo.png" class="custom-image-button" style="max-width: 250px;">
-              <img src="img/tud-logo.png" class="custom-image-button" style="max-width: 250px;">
-            </div>
             <!-- --------------------------------------------------------- -->
-            <h3>Supporters</h3>
+
+            <!-- --------------------------------------------------------- -->
+            <!-- <h3>Work Experience</h3>
+            
             <hr>
-            <div class="control-group">
-              <img src="img/springer-logo.png" class="custom-image-button" style="max-width: 250px;">
-            </div>
+            <ul>
+              
+             <li>
+              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <p class="text" style="margin-right: 15px;"> <b> Data Fusion Specialist - <a target="_blank" href="https://www.saab.com/"><b>SAAB</b></a></b></br>
+            <b>2023 - 2024</b></br>
+              Contract position where I developed and deployed systems for local clients using satellite and radar data to detect, classify, and track ships in real-time.
+              </p>
+              </div>
+             </li>
+              <li>
+              <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+              <p class="text" style="margin-right: 15px;">  <b>Research & Development AI Engineer - <a target="_blank" href="https://www.fortyguard.com/"><b>FortyGuard</b></a></b></br>
+            <b>2022 - 2024</b></br>
+                Led the design and implementation of their geospatial temperature analytics models and report generation.
+              </p>
+              </div>
+             </li>
+             
+            </ul> -->
+            
           </div>
         </div>
       </div>
