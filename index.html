@@ -4,7 +4,31 @@
 <head>
 <style>
   /* --- Publication Entry Styles (Updated) --- */
-  
+  .pub-section {
+  position: relative;        /* establishes positioning context */
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.pub-section hr {
+  border: none;
+  border-top: 2px solid #ccc; /* adjust as needed */
+  margin: 1rem 0;
+}
+
+.pub-section .pub-image {
+  position: absolute;
+  right: 0;                  /* align to right edge */
+  top: 50%;                  /* vertically centered over the hr */
+  transform: translateY(-50%); /* perfectly center vertically */
+  width: 200px;              /* adjust size as needed */
+  height: auto;
+  object-fit: contain;
+  z-index: 10;               /* ensures it stays on top of hr */
+  background: white;         /* optional, if you want to mask line behind */
+  padding-left: 0.5rem;      /* optional, gives spacing from hr line */
+}
+
   .pub-container {
     max-width: 64rem;
     margin-left: auto;
@@ -125,6 +149,8 @@
     <div class="banner" style="background: url('img/feature.jpg') no-repeat center; background-size: cover; height: 280px;">
 <img src="img/zeit_crop.png"  style="position: absolute; bottom: 0px; left: 0px; width: 100px; height: 100px; z-index: 10; object-fit: cover;">
 
+
+
       <div class="banner-table flex-column" style="background-color: rgba(0, 0, 0, 0.5); align-items: flex-start; padding-left: 25%;">
         
 <div class="flex-row" style="align-items: center;">
@@ -163,10 +189,12 @@
             </p>
 
             <p class="text">
-            </p>
-
+            </p><div class="pub-section">
   <h3>Publications</h3>
   <hr>
+  <img src="img/z3tr_crop.png" alt="Decorative image" class="pub-image">
+</div>
+
   
   <div class="pub-container">
   <!-- Flex container: -->
@@ -302,8 +330,12 @@
   </div>
 </div>
             <!-- --------------------------------------------------------- -->
-            <h3>Education</h3>
-            <hr>
+            </p><div class="pub-section">
+  <h3>Publications</h3>
+  <hr>
+  <img src="img/z3trzeit_crop.png" alt="Decorative image" class="pub-image" style="width: 110px; height: auto;">
+</div>
+
             <ul>
               <li>
               <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
